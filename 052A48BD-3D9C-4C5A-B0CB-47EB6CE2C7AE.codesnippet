@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ttm</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#import "&lt;#VC#&gt;.h"
+
+@interface &lt;#VC#&gt; ()&lt;UITableViewDelegate, UITableViewDataSource&gt;
+
+@property (nonatomic, strong) UITableView *tableView;
+
+@end
+
+@implementation &lt;#VC#&gt;
+
+#pragma mark - lifeCycle
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self configTableView];
+}
+
+#pragma mark - init
+#pragma mark - getter / setter
+#pragma mark - override
+#pragma mark - notification
+#pragma mark - event
+#pragma mark - network
+#pragma mark - private
+
+#pragma mark - tableView
+
+- (void)configTableView {
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+    [self.view addSubview:self.tableView];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+    
+    CXTableViewRegisterClass(self.tableView, [UITableViewCell class]);
+    
+    self.tableView.rowHeight = 44;
+    
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return  10;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 10;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return CGFLOAT_MIN;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    return nil;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = CXTableViewDequeueCell(tableView,UITableViewCell);
+    cell.textLabel.text = ((NSArray *)self.cellTitles[indexPath.section])[indexPath.row];
+    cell.imageView.image = ((NSArray *)self.cellImages[indexPath.section])[indexPath.row];
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+}
+
+@end</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>052A48BD-3D9C-4C5A-B0CB-47EB6CE2C7AE</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>tableView</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>My Code Snippet</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
