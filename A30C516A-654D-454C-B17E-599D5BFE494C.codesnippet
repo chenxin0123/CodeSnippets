@@ -18,9 +18,11 @@
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
     
-    self.tableView.rowHeight = 44;
-    
+    [self.tableView registerClass:NSClassFromString(@"SAInstitutionCell") forCellReuseIdentifier:@"SAInstitutionCell"];
+    self.tableView.rowHeight = 80;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
