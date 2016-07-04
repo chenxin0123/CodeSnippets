@@ -3,21 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>vm</string>
+	<string>gt</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (void)&lt;#mn#&gt; {
-    
+	<string>- (&lt;#UIView#&gt; *)&lt;#tableHeaderView#&gt; {
+    if (!_&lt;#tableHeaderView#&gt;) {
+        _&lt;#tableHeaderView#&gt;
+    }
+    return _&lt;#tableHeaderView#&gt;;
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>5F8B86FF-807F-4E23-B55F-BAF1F0FC40CD</string>
+	<string>C6407315-E10C-4D8F-82B0-4C1969C5EA08</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>快速创建一个void方法</string>
+	<string>getter</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>My Code Snippet</string>
 	<key>IDECodeSnippetUserSnippet</key>

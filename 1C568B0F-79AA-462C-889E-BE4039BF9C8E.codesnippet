@@ -3,21 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>vm</string>
+	<string>iw</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassImplementation</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (void)&lt;#mn#&gt; {
+	<string>#pragma clang diagnostic push
+#pragma clang diagnostic ignored "&lt;#name#&gt;"
     
-}</string>
+#pragma clang diagnostic pop</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>5F8B86FF-807F-4E23-B55F-BAF1F0FC40CD</string>
+	<string>1C568B0F-79AA-462C-889E-BE4039BF9C8E</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
-	<string>快速创建一个void方法</string>
+	<string>clang ignore warning</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>My Code Snippet</string>
 	<key>IDECodeSnippetUserSnippet</key>
